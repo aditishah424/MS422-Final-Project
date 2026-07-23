@@ -72,35 +72,7 @@ Model performance will be evaluated using:
 * ROC-AUC
 * Confusion Matrix
 * Cross-Validation
-
----
-
-## Repository Structure
-
-```text
-Hotel-Booking-Cancellation-Prediction/
-│
-├── data/
-│   └── hotel_bookings.csv
-│
-├── figures/
-│   ├── figure1_class_distribution.png
-│   ├── figure2_hotel_type.png
-│   └── ...
-│
-├── src/
-│   ├── eda.py
-│   ├── feature_engineering.py
-│   ├── modeling.py
-│   └── evaluation.py
-│
-├── reports/
-│   ├── Midpoint_Report.pdf
-│   └── Final_Presentation.pptx
-│
-├── README.md
-└── requirements.txt
-```
+  
 
 ---
 
@@ -112,22 +84,6 @@ Hotel-Booking-Cancellation-Prediction/
 * Matplotlib
 * Scikit-learn
 
----
-
-## Current Progress
-
-* ✓ Dataset selected
-* ✓ Exploratory Data Analysis
-* ✓ Data cleaning and preprocessing
-* ✓ Feature engineering
-
-### Upcoming Work
-
-* Build and compare machine learning models
-* Hyperparameter tuning
-* Model evaluation
-* Business recommendations
-* Final presentation
 
 ---
 
