@@ -102,5 +102,3 @@ Accurate prediction of booking cancellations can help hotels:
 ## Author
 
 **Aditi Shah**
-
-Graduate Machine Learning Course Project
