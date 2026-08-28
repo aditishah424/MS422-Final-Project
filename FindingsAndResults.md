@@ -1,33 +1,23 @@
 # Findings and Conclusions
 
-## Model Results and Performance
+## Model Performance Summary
 
-Four machine learning classification models were developed and evaluated to predict hotel booking cancellations:
+All four models demonstrated the ability to predict hotel booking cancellations; however, performance varied across algorithms.
 
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Gradient Boosting
+- Logistic Regression provided a strong baseline model and demonstrated that cancellation behavior could be predicted using historical booking information.
+- Decision Tree produced interpretable results but showed lower overall predictive performance compared to ensemble methods.
+- Gradient Boosting improved predictive accuracy by capturing more complex relationships within the data.
+- Random Forest achieved the strongest overall performance and was selected as the final model.
 
-Model performance was assessed using Accuracy, Precision, Recall, F1-Score, ROC-AUC, Confusion Matrix analysis, ROC Curve comparison, and Cross-Validation.
+The final Random Forest model achieved:
 
-To improve model performance, hyperparameter tuning was performed on the Random Forest model using GridSearchCV. The optimal configuration consisted of:
+- ROC-AUC: 0.906 (Test Set)
+- Cross-Validated ROC-AUC: 0.8994
+- Optimal Parameters:
+  - Number of Trees (n_estimators): 200
+  - Maximum Tree Depth (max_depth): None
 
-- Number of Trees (n_estimators): 200
-- Maximum Tree Depth (max_depth): None
-
-The optimized Random Forest model achieved a cross-validated ROC-AUC score of **0.8994**, indicating strong predictive performance and an excellent ability to distinguish between canceled and non-canceled bookings.
-
-Based on overall performance, Random Forest was selected as the final recommended model because it demonstrated the strongest balance of predictive accuracy, robustness, and generalization capability.
-
-Visualizations generated during model evaluation included:
-
-- Model comparison chart
-- ROC Curve comparison
-- Confusion Matrix
-- Feature Importance analysis
-
-These visualizations confirmed that the Random Forest model consistently outperformed the baseline and competing models.
+The model demonstrated a strong ability to distinguish between canceled and non-canceled reservations while maintaining good generalization performance across validation folds.
 
 ---
 
