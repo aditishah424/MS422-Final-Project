@@ -128,147 +128,60 @@ The model provides a scalable and cost-effective approach for improving operatio
 
 ## Lessons Learned
 
-Several important insights emerged throughout the project:
+Several important insights emerged throughout the project.
 
-### Data Preparation is Critical
+### Data Quality Matters
 
-Handling missing values, duplicate records, and feature engineering significantly influenced model performance. Data quality proved to be one of the most important factors affecting predictive success.
+Cleaning missing values, removing duplicate records, and preparing the dataset appropriately had a significant impact on model performance. High-quality data served as the foundation of an effective predictive solution.
 
-### Feature Engineering Creates Business Value
+### Feature Engineering Improves Results
 
-Derived variables such as:
+Creating new variables such as:
 
 - Total Guests
 - Total Nights
 - Family Booking Indicator
-- Special Request Flag
 - Lead Time Category
 - Booking Season
 
-added meaningful information that improved predictive capability and business understanding.
+helped capture customer behavior patterns and improved predictive performance.
 
-### Ensemble Models Perform Well on Structured Data
+### Historical Behavior Predicts Future Behavior
 
-Random Forest and Gradient Boosting consistently outperformed simpler models because of their ability to capture complex interactions among reservation attributes.
+Customer booking characteristics and previous reservation behavior provided valuable insight into cancellation risk. Factors such as lead time, deposit type, and prior booking activity were particularly influential.
 
-### Multiple Evaluation Metrics Are Necessary
+### Model Selection Matters
 
-While accuracy is important, metrics such as Precision, Recall, F1-Score, and ROC-AUC provided a much more complete assessment of model effectiveness.
+While all four models provided useful predictive capability, Random Forest delivered the strongest overall performance and demonstrated the best balance between accuracy and reliability.
 
-### Cross-Validation Improves Reliability
+### Business Understanding Is Essential
 
-Cross-validation helped ensure that model performance generalized well across different subsets of the data and reduced the likelihood of overfitting.
+The most valuable outcome of this project was not simply predicting cancellations, but identifying actionable trends that hotels can use to improve planning, forecasting, and customer retention efforts.
 
 ---
 
 ## Recommendations
 
-Based on the results of this analysis, the following recommendations are proposed:
+Based on the results of this analysis, the following recommendations are proposed.
 
-### 1. Focus on Long Lead-Time Reservations
+### Focus on Long Lead-Time Reservations
 
-Reservations made far in advance should receive additional monitoring because they are more likely to be canceled.
+Reservations made far in advance should receive additional monitoring and customer outreach because they are more likely to be canceled.
 
-### 2. Develop Targeted Retention Campaigns
+### Develop Targeted Retention Campaigns
 
-Customers identified as high-risk should receive:
+Customers identified as high risk should receive:
 
-- Confirmation reminders
-- Loyalty incentives
+- Reservation reminders
 - Personalized offers
-- Flexible reservation modification options
+- Loyalty incentives
+- Flexible booking modification options
 
-### 3. Review Deposit Policies
+### Review Deposit Policies
 
-Customer segments with elevated cancellation rates may benefit from stricter deposit requirements to reduce reservation volatility.
-
-### 4. Monitor OTA Reservations More Closely
-
-Since Online Travel Agency bookings exhibit higher cancellation rates, channel-specific retention strategies should be implemented.
-
-### 5. Integrate Prediction Models into Daily Operations
-
-Cancellation predictions should be incorporated into occupancy forecasting, revenue management, staffing decisions, and overbooking strategies.
+Deposit requirements appear to influence customer commitment and may help reduce cancellation 
 
 ---
-
-# Next Steps and Future Enhancements
-
-Future work could further improve predictive performance and business value.
-
-## Additional Models
-
-Potential future modeling approaches include:
-
-- XGBoost
-- LightGBM
-- Support Vector Machines (SVM)
-- Neural Networks
-- Ensemble Stacking Methods
-
-Although Neural Networks were considered, ensemble tree-based models are generally better suited for structured tabular datasets and offer greater interpretability for business stakeholders.
-
-## Explainable AI
-
-Future versions of this project could incorporate:
-
-- SHAP (SHapley Additive Explanations)
-- LIME (Local Interpretable Model-Agnostic Explanations)
-
-These techniques would improve transparency by explaining individual prediction outcomes.
-
-## Automated Deployment
-
-The final model could be deployed through:
-
-- Flask API
-- FastAPI
-- AWS SageMaker
-- Azure Machine Learning
-
-This would allow reservation systems to automatically generate cancellation-risk scores in real time.
-
----
-
-# Third-Party Datasets for Future Analysis
-
-Additional data sources could potentially improve predictive performance.
-
-### Weather Data
-
-- Temperature
-- Severe weather events
-- Seasonal disruptions
-
-### Tourism and Travel Demand Data
-
-- Tourism volume
-- Regional event schedules
-- Holiday calendars
-
-### Economic Indicators
-
-- Consumer confidence
-- Inflation
-- Exchange rates
-- Travel spending trends
-
-### Transportation Data
-
-- Flight cancellations
-- Flight delays
-- Transportation disruptions
-
-### Customer Loyalty Data
-
-- Loyalty membership status
-- Historical stay frequency
-- Customer lifetime value
-
-Combining external datasets with hotel reservation data could improve predictive performance while providing a broader understanding of customer behavior.
-
----
-
 # References
 
 Antonio, N., de Almeida, A., & Nunes, L. (2019). *Hotel Booking Demand Datasets*. Data in Brief, 22, 41–49.
